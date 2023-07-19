@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Регистрация</title>
+</head>
+<body>
+    <h1>Регистрация</h1>
+    <form method="post" action="{% url 'register' %}">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Имя пользователя"><br>
+        <input type="password" name="password" placeholder="Пароль"><br>
+        <input type="submit" value="Зарегистрироваться">
+    </form>
+</body>
+</html>
